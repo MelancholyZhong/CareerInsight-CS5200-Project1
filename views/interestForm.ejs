@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+
+<body>
+  <h1><%= title %></h1>
+
+  <form action=<%= action %> method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <br>
+
+    <label for="category">Category Name:</label>
+    <input type="text" id="category" name="category" required>
+    <br>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <% if (interest) { %>
+  <div>
+    <div>
+      <label>Name: <output><%= interest.name %></output> </label>
+    </div>
+    <div>
+      <label>Category: <output><%= interest.category_name %></output> </label>
+    </div>
+  </div>
+  <hr />
+  <% } %>
+
+  <% if (error) { %>
+  <div>
+    <p><%= error %></p>
+  </div>
+  <hr />
+  <% } %>
+
+</body>
+
+</html>

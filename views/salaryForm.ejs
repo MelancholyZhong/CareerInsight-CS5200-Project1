@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+
+<body>
+  <h1><%= title %></h1>
+
+  <form action="/salary" method="post">
+    <label for="positionId">Position Id:</label>
+    <input type="text" id="positionId" name="positionId" required>
+    <br>
+
+    <label for="salary">New Salary:</label>
+    <input type="number" id="salary" name="salary" required>
+    <br>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <% if (position) { %>
+  <% position.forEach(function(p){ %>
+  <div>
+    <div>
+      <label>Position ID: <output><%= p.position_id %></output> </label>
+    </div>
+    <div>
+      <label>Title: <output><%= p.title %></output> </label>
+    </div>
+    <div>
+      <label>Company: <output><%= p.company_id %></output> </label>
+    </div>
+    <div>
+      <label>Base Salary: <output><%= p.base_salary %></output> </label>
+    </div>
+    <div>
+      <label>Bonus: <output><%= p.bonus %></output> </label>
+    </div>
+  </div>
+  <hr />
+  <% }); %>
+  <% } %>
+
+  <% if (error) { %>
+  <div>
+    <p><%= error %></p>
+  </div>
+  <hr />
+  <% } %>
+
+</body>
+
+</html>

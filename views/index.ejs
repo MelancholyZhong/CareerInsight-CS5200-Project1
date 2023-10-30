@@ -1,26 +1,29 @@
 <!doctype html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel="stylesheet" href="/stylesheets/style.css" />
-  </head>
-  <body>
-    <h1><%= title %></h1>
 
-    <% companies.forEach(function(company){ %>
+<head>
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+
+<body>
+  <h1><%= title %></h1>
+
+  <% companies.forEach(function(company){ %>
+  <div>
     <div>
-      <div>
-        <label>Company ID: <output><%= company.company_id %></output> </label>
-      </div>
-      <div>
-        <label>Company name: <output><%= company.company_name %></output> </label>
-      </div>
+      <label>Company ID: <output><%= company.company_id %></output> </label>
     </div>
-    <hr />
-    <% }); %>
+    <div>
+      <label>Company name: <output><%= company.company_name %></output> </label>
+    </div>
+  </div>
+  <hr />
+  <% }); %>
 
-    <footer>
-      <div>Made by Yao with 🥶</div>
-    </footer>
-  </body>
+  <footer>
+    <div>Made by Yao with 🥶</div>
+  </footer>
+</body>
+
 </html>

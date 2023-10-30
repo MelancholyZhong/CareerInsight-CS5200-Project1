@@ -1,35 +1,38 @@
 <!doctype html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel="stylesheet" href="/stylesheets/style.css" />
-  </head>
-  <body>
-    <h1><%= title %></h1>
 
-    <% positions.forEach(function(position){ %>
+<head>
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+
+<body>
+  <h1><%= title %></h1>
+
+  <% positions.forEach(function(position){ %>
+  <div>
     <div>
-      <div>
-        <label>Position ID: <output><%= position.position_id %></output> </label>
-      </div>
-      <div>
-        <label>Title: <output><%= position.title %></output> </label>
-      </div>
-      <div>
-        <label>Company: <output><%= position.company_name %></output> </label>
-      </div>
-      <div>
-        <label>Base Salary: <output><%= position.base_salary %></output> </label>
-      </div>
-      <div>
-        <label>Bonus: <output><%= position.bonus %></output> </label>
-      </div>
+      <label>Position ID: <output><%= position.position_id %></output> </label>
     </div>
-    <hr />
-    <% }); %>
+    <div>
+      <label>Title: <output><%= position.title %></output> </label>
+    </div>
+    <div>
+      <label>Company: <output><%= position.company_name %></output> </label>
+    </div>
+    <div>
+      <label>Base Salary: <output><%= position.base_salary %></output> </label>
+    </div>
+    <div>
+      <label>Bonus: <output><%= position.bonus %></output> </label>
+    </div>
+  </div>
+  <hr />
+  <% }); %>
 
-    <footer>
-      <div>Made by Yao with 🥶</div>
-    </footer>
-  </body>
+  <footer>
+    <div>Made by Yao with 🥶</div>
+  </footer>
+</body>
+
 </html>

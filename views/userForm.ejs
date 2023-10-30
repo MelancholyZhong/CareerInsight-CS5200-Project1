@@ -1,40 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title><%= title %></title>
-    <link rel="stylesheet" href="/stylesheets/style.css" />
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/stylesheets/style.css" />
 </head>
+
 <body>
-    <h1><%= title %></h1>
+  <h1><%= title %></h1>
 
-    <form action="/user/add" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        <br>
+  <form action="/user/add" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <br>
 
-        <label for="school">Graduation School:</label>
-        <input type="text" id="school" name="school" required>
-        <br>
+    <label for="school">Graduation School:</label>
+    <input type="text" id="school" name="school" required>
+    <br>
 
-        <input type="submit" value="Submit">
-    </form>
-    
-    <% if (user) { %>
-        <% user.forEach(function(u){ %>
-            <div>
-              <div>
-                <label>User ID: <output><%= u.user_id %></output> </label>
-              </div>
-              <div>
-                <label>Name: <output><%= u.name %></output> </label>
-              </div>
-              <div>
-                <label>Graduation School: <output><%= u.graduation_school %></output> </label>
-              </div>
-            </div>
-            <hr />
-            <% }); %>
-    <% } %>
+    <input type="submit" value="Submit">
+  </form>
+
+  <% if (user) { %>
+  <% user.forEach(function(u){ %>
+  <div>
+    <div>
+      <label>User ID: <output><%= u.user_id %></output> </label>
+    </div>
+    <div>
+      <label>Name: <output><%= u.name %></output> </label>
+    </div>
+    <div>
+      <label>Graduation School: <output><%= u.graduation_school %></output> </label>
+    </div>
+  </div>
+  <hr />
+  <% }); %>
+  <% } %>
 
 </body>
+
 </html>

@@ -25,3 +25,18 @@ e.g. `http://localhost:3000/position/Programmer`
 In address, input: `http://localhost:3000/user/add`
 
 then input the user name and graduation school
+
+## add interest
+In address, input : `http://localhost:3000/interest/add`
+ 
+Then input the user name and category
+
+## delete interest
+In address, input : `http://localhost:3000/interest/delete`
+ 
+Then input the user name and category
+
+## update salary of a position
+In address, input : `http://localhost:3000/salary`
+ 
+Then input the position_id and new salary
