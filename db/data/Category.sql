@@ -1,0 +1,10 @@
+insert into Category (category_id, category_name) values (1, 'Services');
+insert into Category (category_id, category_name) values (2, 'Legal');
+insert into Category (category_id, category_name) values (3, 'Legal');
+insert into Category (category_id, category_name) values (4, 'Marketing');
+insert into Category (category_id, category_name) values (5, 'Sales');
+insert into Category (category_id, category_name) values (6, 'Research and Development');
+insert into Category (category_id, category_name) values (7, 'Support');
+insert into Category (category_id, category_name) values (8, 'Marketing');
+insert into Category (category_id, category_name) values (9, 'Support');
+insert into Category (category_id, category_name) values (10, 'Services');
